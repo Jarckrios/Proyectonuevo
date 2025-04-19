@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te quiero mucho 💕</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    iframe.youtube-audio {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Música de fondo desde YouTube (silenciado y en bucle) -->
+  <iframe class="youtube-audio"
+    src="https://www.youtube.com/embed/nyuo9-OjNNg?autoplay=1&loop=1&playlist=nyuo9-OjNNg&mute=1"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
+
+  <div class="roses-container"></div>
+
+  <div class="container">
+    <div class="sunflower-container">
+      <div class="petals">
+        <!-- 8 pétalos -->
+        <div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div>
+      </div>
+      <div class="sunflower-center"></div>
+      <div class="stem"></div>
+      <div class="leaf"></div>
+    </div>
+
+    <h1 class="message">Te quiero mucho 💕</h1>
+  </div>
+
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const rose = document.createElement('div');
+      rose.classList.add('rose');
+      rose.style.left = Math.random() * 100 + 'vw';
+      rose.style.animationDuration = (5 + Math.random() * 5) + 's';
+      rose.style.animationDelay = Math.random() * 5 + 's';
+      document.querySelector('.roses-container').appendChild(rose);
+    }
+  </script>
+</body>
+</html>
